@@ -15,17 +15,14 @@
 
 
 
-<meta name="description" content="java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://codingyizq.xyz/tags/index.html">
 <meta property="og:site_name" content="codingYizq&#39;s Blog">
-<meta property="og:description" content="java">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T15:25:22.600Z">
+<meta property="og:updated_time" content="2018-05-17T09:51:29.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="java">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -171,6 +168,8 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -195,7 +194,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <ul class="tag-list"></ul>
                     </div>
                 </section>
                 
@@ -206,6 +205,8 @@
                     
                       <a class="main-nav-link switch-friends-link" href="https://github.com/codingyizq">GitHub</a>
                     
+                      <a class="main-nav-link switch-friends-link" href="https://www.zhihu.com/people/yi-zhi-qiang-8/activities">知乎</a>
+                    
                     </div>
                 </section>
                 
@@ -214,7 +215,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">true</div>
+                    <div id="js-aboutme">一个大三自学编程的菜鸟</div>
                 </section>
                 
             </div>
@@ -245,6 +246,8 @@
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/随笔">随笔</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -385,8 +388,7 @@
 </script>
 
           
-        <p>java</p>
-
+        
       
     </div>
     
@@ -482,7 +484,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 4;
+                var backgroundnum = 6;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
