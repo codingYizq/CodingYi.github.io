@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codingyizq.xyz/tags/index.html</loc>
+    
+    <lastmod>2018-05-20T06:32:32.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://codingyizq.xyz/about/index.html</loc>
+    
+    <lastmod>2018-05-20T06:27:48.276Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codingyizq.xyz/2018/05/20/%E9%A9%AC%E5%A3%AB%E5%85%B5java%E8%A7%86%E9%A2%91%E5%AD%A6%E4%B9%A0%E6%B8%85%E5%8D%95%EF%BC%88%E6%96%87%E6%9C%AB%E9%99%84%E9%A9%AC%E5%A3%AB%E5%85%B5%E5%85%A8%E5%A5%97%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%EF%BC%89/</loc>
     
-    <lastmod>2018-05-19T17:39:30.754Z</lastmod>
+    <lastmod>2018-05-20T06:27:26.527Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>http://codingyizq.xyz/2018/05/17/hello-world/</loc>
     
     <lastmod>2018-05-19T16:53:29.257Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codingyizq.xyz/about/index.html</loc>
-    
-    <lastmod>2018-05-17T13:50:48.480Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codingyizq.xyz/tags/index.html</loc>
-    
-    <lastmod>2018-05-17T09:51:29.673Z</lastmod>
     
   </url>
   
