@@ -44,7 +44,7 @@
           isArchive: false,
           isTag: false,
           isCategory: false,
-          open_in_new: false
+          open_in_new: true
       }
   </script>
 </head>
@@ -67,6 +67,10 @@
         
         <p class="header-subtitle">I have nothing but code</p>
         
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
+            </form>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -332,7 +336,7 @@
 
       
         <p class="article-more-link">
-          <a  href="/2018/05/20/马士兵java视频学习清单（文末附马士兵全套视频资源）/#more">阅读全文 >></a>
+          <a  href="/2018/05/20/马士兵java视频学习清单（文末附马士兵全套视频资源）/#more">More >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -395,7 +399,7 @@
 
       
         <p class="article-more-link">
-          <a  href="/2018/05/10/Hexo与GitHub常用命令/#more">阅读全文 >></a>
+          <a  href="/2018/05/10/Hexo与GitHub常用命令/#more">More >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -530,6 +534,23 @@ MathJax.Hub.Queue(function() {
     });
 </script>
 
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
 
   </div>
 </body>
