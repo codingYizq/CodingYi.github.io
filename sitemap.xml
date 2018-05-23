@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://codingyizq.xyz/about/index.html</loc>
+    
+    <lastmod>2018-05-23T11:32:52.934Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://codingyizq.xyz/2018/05/10/Hexo%E4%B8%8EGitHub%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2018-05-22T16:23:07.023Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://codingyizq.xyz/tags/index.html</loc>
     
     <lastmod>2018-05-20T06:38:45.666Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://codingyizq.xyz/about/index.html</loc>
-    
-    <lastmod>2018-05-20T06:27:48.276Z</lastmod>
     
   </url>
   
