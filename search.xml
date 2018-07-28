@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>ASP.Net MVC开发基础</title>
+      <link href="/2018/07/28/ASP-Net-MVC%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/"/>
+      <url>/2018/07/28/ASP-Net-MVC%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/</url>
+      <content type="html"><![CDATA[<blockquote><p>一、ASP.Net的两种开发模式<br>二、MVC模式的解读<br>三、第一个ASP.Net MVC程序<br><a id="more"></a></p></blockquote><h4 id="一、ASP-Net的两种开发模式"><a href="#一、ASP-Net的两种开发模式" class="headerlink" title="一、ASP.Net的两种开发模式"></a>一、ASP.Net的两种开发模式</h4><h6 id="1-1ASP-Net-WebForm的开发模式"><a href="#1-1ASP-Net-WebForm的开发模式" class="headerlink" title="1.1ASP.Net WebForm的开发模式"></a>1.1ASP.Net WebForm的开发模式</h6><p><img src="/2018/07/28/ASP-Net-MVC开发基础/images\ASP.Net WebForm的开发模式.png" alt="ASP.Net WebForm的开发模式"><br>（1）处理流程<br>　　在传统的WebForm模式下，我们请求一个例如<a href="http://www.aspnetmvc.com/blog/index.aspx" target="_blank" rel="noopener">http://www.aspnetmvc.com/blog/index.aspx</a> 的URL，那么我们的WebForm程序会到网站根目录下去寻找blog目录下的index.aspx文件，然后由index.aspx页面的CodeBehind文件(.CS文件)进行逻辑处理，其中或许也包括到数据库去取出数据(其中的经过怎样的BLL到DAL这里就不谈了)，然后再由index.aspx页面来呈现给用户。<br>　　综上所述，在WebForm模式下：一个URL请求的是在服务器与该URL对应路径上的物理文件(ASPX文件或其他)，然后由该文件来处理这个请求并返回结果给客户端。<br>（2）开发方式<br>　　• 服务器端控件<br>　　• 一般处理程序+Html静态页+Ajax<br>　　• 一般处理程序+Html模板引擎  </p><h6 id="1-2-ASP-Net-MVC的开发模式"><a href="#1-2-ASP-Net-MVC的开发模式" class="headerlink" title="1.2 ASP.Net MVC的开发模式"></a>1.2 ASP.Net MVC的开发模式</h6><p>  <img src="/2018/07/28/ASP-Net-MVC开发基础/images\ASP.Net MVC的开发模式.png"><br>（1）处理流程<br>　　在ASP.Net MVC中，客户端所请求的URL是被映射到相应的Controller去，然后由Controller来处理业务逻辑，或许要从Model中取数据，然后再由Controller选择合适的View返回给客户端。再说回前面我们运行的ASP.NET MVC程序访问的<a href="http://www.aspnetmvc.com/Home/Index" target="_blank" rel="noopener">http://www.aspnetmvc.com/Home/Index</a> 这个URL，它访问的其实是HomeController中的Index这个Action。<br>（2）显著特点<br>　　• 2009年第一个开源项目版本发布，至今已过去5年，发展逐渐完善<br>　　• 更加简洁，更加接近原始的“请求-处理-响应”<br>　　• 更加开发、更多的新的特点、社区活跃<br>　　• 不会取代WebForm<br>　　• 底层跟WebForm都是一样的，只是管道上不同的处理而已  </p><h4 id="二、MVC模式的解读"><a href="#二、MVC模式的解读" class="headerlink" title="二、MVC模式的解读"></a>二、MVC模式的解读</h4><p>　　MVC 模式两种理解：一种是表现模式，另外一种是架构模式。它将应用程序分成三个主要组件即：视图（View）、控制器（Controller）和模型（Model）。现在，我们来看看M-V-C分别代表什么？<br>　　M：Model 主要是存储或者是处理数据的组件；Model其实是实现业务逻辑层对实体类相应数据库操作，如：CRUD。它包括数据、验证规则、数据访问和业务逻辑等应用程序信息。（补充：ViewModel：视图模型）<br>　　V：View 是用户接口层组件。主要是将Model中的数据展示给用户。aspx和ascx文件被用来处理视图的职责；<br>　　C： Controller 处理用户交互，从Model中获取数据并将数据传给指定的View；    </p><h4 id="三、第一个ASP-Net-MVC程序"><a href="#三、第一个ASP-Net-MVC程序" class="headerlink" title="三、第一个ASP.Net MVC程序"></a>三、第一个ASP.Net MVC程序</h4><h6 id="3-1-新建项目后的文件组织结构"><a href="#3-1-新建项目后的文件组织结构" class="headerlink" title="3.1 新建项目后的文件组织结构"></a>3.1 新建项目后的文件组织结构</h6><p>　　（1）新建一个ASP.Net MVC 4项目，选择“基本”配置与“ASPX”视图引擎（暂时不用Razor引擎）。<br>　　（2）VS为我们生成的基本文件组织结构如下图所示：<br>  <img src="/2018/07/28/ASP-Net-MVC开发基础/images\MVC基本文件组织结构.jpg"><br>　　可以看出，VS默认帮我们创建好了Models、Views以及Controllers的三个文件夹，这三个文件夹就构成了我们的ASP.Net MVC模式的项目。其中，Controllers是所有控制器的类文件所在，而Models则是所有模型的类文件所在，而Views则是所有cshtml或aspx的文件所在。  </p><h6 id="4-2-控制器的“约定大于配置”"><a href="#4-2-控制器的“约定大于配置”" class="headerlink" title="4.2 控制器的“约定大于配置”"></a>4.2 控制器的“约定大于配置”</h6><p>　　在Controllers中新建一个控制器，取名为HomeController。在默认的Index这个Action中新建一个视图，默认名为Index即可。<br>　　（1）Controller放到controllers文件夹中，并且命名方式以Controller结尾<br>   <img src="/2018/07/28/ASP-Net-MVC开发基础/images\控制器的约定.jpg"><br>　　（2）每个Controller都对应View中的一个文件夹，文件夹的名称跟Controller名相同<br>　　（3）Controller中的方法名都对应一个View视图（非必须，但是建议这么做）而且View的名字跟Action的名字相同<br>　　（4）控制器必须是非静态类，并且要实现IController接口<br>　　（5）Controller类型可以放到其他项目中  </p><h6 id="4-3-视图的相关约定"><a href="#4-3-视图的相关约定" class="headerlink" title="4.3 视图的相关约定"></a>4.3 视图的相关约定</h6><p>   <img src="/2018/07/28/ASP-Net-MVC开发基础/images\视图的相关约定.jpg"><br>　　（1）所有的视图必须放到Views目录下<br>　　（2）不同控制器的视图用文件夹进行分割，每个控制器都对应一个视图目录<br>　　（3）一般视图名字跟控制器的Action相对应（非必须）<br>　　（4）多个控制器公共的视图放到Shared：例如公用的错误页、列表模板页、表单模板页等等；</p>]]></content>
+      
+      <categories>
+          
+          <category> 自学笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ASP.Net </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>我的第一个项目——在线聊天系统</title>
       <link href="/2018/05/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E7%B3%BB%E7%BB%9F-1/"/>
       <url>/2018/05/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E7%B3%BB%E7%BB%9F-1/</url>
